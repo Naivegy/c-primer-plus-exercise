@@ -1,0 +1,123 @@
+// 第三章.cpp: 定义控制台应用程序的入口点。
+//
+
+#include "stdafx.h"
+#include"iostream"
+using namespace std;
+
+int main()
+{
+	/********************第一题****************************
+	int x;
+	cout << "输入你的身高___\b\b\b" ;
+	cin >> x;
+	const int a = x;
+	float c = a / 3.33f;
+	cout <<"你的英尺数为："<< c << endl;
+	/********************************************************/
+
+	/********************第二题******************************
+	int  a, b, c, d;
+	float e,f,g;
+
+	cout << "英尺";           
+	cin >> a;
+	cout << endl;
+	cout << "英寸";
+	cin >> b;
+	cout << endl;
+	cout << "磅数";
+	cin >> c;
+	cout << endl;
+	d = 12 * a;
+	e = (d + b) * 0.0254f;
+	f = c / 2.2f;
+	cout << "千克数：" << f << endl;
+	g = f / e / e;
+	cout << "BMI is:" << g << endl;
+	/*********************************************/
+
+    /******************第三题*****************************
+	int a, b, c;
+	double d, e,f;
+	cout << "输入度：";
+	cin >> a;
+	cout << endl;
+	const int x = a;
+	cout << "输入分：";
+	cin >> b;
+	cout << endl;
+	const int y = b;
+	cout << "输入秒：";
+	cin >> c;
+	cout << endl;
+	const int z = c;
+	const double q = double(1) / double(60);
+	*****************************************************
+	const double w = double(1) / double(360);             //算法不一样  最后会有误差
+	d = a * q;
+	cout << d;
+	e = b * q*q;
+	cout << e;
+	******************************************************
+	d = (z*q + y)*q;
+
+    f = x + d ;
+	cout << "纬度为：" << f << endl;
+	/*************************************************/
+
+
+	/******************第四题*************************
+	long long a,b,c,d;
+	cout << "输入秒数" << endl;
+	cin >> a;
+	b = a % (60 * 60 * 24);
+	const long long day = a / 60 / 60 / 24;
+	c = b % (60 * 60);
+	const long long hour = b / 60 / 60;
+	d = c % 60;
+	const long long minute = c / 60;
+	const long long second = d;
+	cout << "天:" << day << "时:" << hour << "分:" << minute << "秒:" << second << endl;
+    /***************************************************/
+
+    /*********************第五题***********************
+	long long world, us;
+	cout << "输入世界人数___\b\b\b";
+	cin >> world;
+	cout << endl;
+	cout << "输入美国人数___\b\b\b";
+	cin >> us;
+	cout << endl;
+	long double percent = long double(us) / long double(world)*100l;
+	cout << "percent is" << percent << "%" << endl;
+	/**************************************************/
+
+	/*****************第六题********************************
+	//一英里=1.609344公里
+	float y, g, gl, s;
+	cout << "输入英里___\b\b\b";
+	cin >> y;
+	cout << endl;
+	cout << "输入加仑数___\b\b\b";
+	cin >> g;
+	cout << endl;
+	const float xiaohao = y / g;
+	
+	cout << "输入公里___\b\b\b";
+	cin >> gl;
+	cout << endl;
+	cout << "输入升数___\b\b\b";
+	cin >> s;
+	cout << endl;
+	const float baigongli =s / gl*100.0f;
+
+	cout << "每消耗1加仑油的里程：" << xiaohao << endl;
+	cout << "每百公里消耗油升数：" << baigongli << endl;
+	/***********************************************************/
+	cin.get();
+	cin.get();
+    return 0;
+}
+
+此是c++primer plus 第三章习题，部分换算未实施，整体程序运行可以。
